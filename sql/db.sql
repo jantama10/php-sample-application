@@ -1,3 +1,8 @@
+CREATE DATABASE sample;
+use sample;
+CREATE USER 'sampleuser'@'localhost' IDENTIFIED WITH mysql_native_password BY 'samplepass';
+GRANT SELECT ON * . * TO 'sampleuser'@'localhost';
+
 DROP FUNCTION IF EXISTS `ordered_uuid`;
 
 DROP TABLE IF EXISTS `tweet`;
